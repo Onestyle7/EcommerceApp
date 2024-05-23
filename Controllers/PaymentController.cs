@@ -20,7 +20,7 @@ namespace EcommerceApp.Controllers
                   new SessionLineItemOptions
                   {
                     // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    Price = "{{PRICE_ID}}",
+                    Price = "price_1PJK48Ls2ndSVWb2ISIdMmqd",
                     Quantity = 1,
                   },
                 },
@@ -34,7 +34,7 @@ namespace EcommerceApp.Controllers
             Response.Headers.Add("Location", session.Url);
             return new StatusCodeResult(303);
         }
-        public IActionResult Succes()
+        public IActionResult Success()
         {
             return View();
         }
