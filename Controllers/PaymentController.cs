@@ -1,4 +1,5 @@
 ﻿using EcommerceApp.Data;
+using EcommerceApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Stripe;
@@ -19,7 +20,7 @@ namespace EcommerceApp.Controllers
             return View(await _context.Items.ToListAsync());
         }
         [HttpPost]
-        public ActionResult CreateCheckout()
+        public ActionResult CreateCheckout([Bind("Id, Name, ImageUrl, PriceId")]Item item)
         {
             var domain = "https://localhost:7095";
             var options = new SessionCreateOptions
@@ -29,7 +30,7 @@ namespace EcommerceApp.Controllers
                   new SessionLineItemOptions
                   {
                     // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    Price = "price_1PJK48Ls2ndSVWb2ISIdMmqd",
+                    Price = $"{item.PriceId}",
                     Quantity = 1,
                   },
                 },
