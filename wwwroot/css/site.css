@@ -4,7 +4,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+      font-size: 16px;
   }
 }
 
@@ -19,13 +19,118 @@ html {
 
 body {
   margin-bottom: 60px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.itemTitle .itemBtn{
-    opacity: 0;
+
+.itemTitle .itemBtn {
+  opacity: 0;
 }
-.item:hover .itemTitle, .item:hover .itemBtn{
-    opacity:1;
+
+.item:hover .itemTitle, .item:hover .itemBtn {
+  opacity: 1;
 }
-.item:hover .itemImg{
-    opacity: 0.4;
+
+.item:hover .itemImg {
+  opacity: 0.4;
 }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #4B0082; /* Fioletowy kolor */
+  color: white;
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-bar input {
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.user-actions button {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.main-content {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+}
+
+.banner {
+  background-color: #D8BFD8; /* Jasny fioletowy kolor */
+  text-align: center;
+  padding: 10px 0;
+}
+
+.recommended-products {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  width: 18%;
+}
+
+  .product img {
+      width: 100%;
+  }
+
+  .product .price {
+      color: red;
+      font-weight: bold;
+  }
+
+.promotions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promotion {
+  width: 48%;
+}
+
+  .promotion img {
+      width: 100%;
+  }
+
+.footer {
+  background-color: #4B0082; /* Fioletowy kolor */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
